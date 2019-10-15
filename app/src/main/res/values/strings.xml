@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">TPDM_U2_practica1_Briseno</string>
+
+    <array name="menu1">
+        <item>Agregar Lista</item>
+        <item>Mostrar Tarea</item>
+        <item>Abrir Tarea</item>
+    </array>
+
+    <array name="menu2">
+        <item>Insertar Lista</item>
+        <item>Mostrar Tarea</item>
+        <item>Eliminar Tarea</item>
+        <item>Volver</item>
+    </array>
+
+</resources>
