@@ -43,35 +43,6 @@
             android:id="@+id/menuLW1"
             android:entries="@array/menu1"/>
     </LinearLayout>
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        >
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Insertar"
-            android:layout_marginLeft="75dp"
-            android:textColor="#59F1FF"
-            android:textSize="20dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="visualizar"
-            android:layout_marginLeft="20dp"
-            android:textColor="#59F1FF"
-            android:textSize="20dp" />
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Agregar \n Tarea"
-            android:layout_marginLeft="19dp"
-            android:textColor="#59F1FF"
-            android:textSize="20dp" />
-
-    </LinearLayout>
 
     <TextView
         android:layout_width="match_parent"

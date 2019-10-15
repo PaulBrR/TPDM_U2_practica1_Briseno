@@ -19,7 +19,7 @@ class MainActivity : AppCompatActivity() {
     var mostrarTodasListas : Button ?= null
     var abrirTareas : Button ?= null
     var mostrarLista : TextView ?= null
-    var bdLista = BaseDatos(this,"practica1",null,1)
+    var basadatos = BaseDatos(this,"practica1",null,1)
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,9 +29,6 @@ class MainActivity : AppCompatActivity() {
 
         descripcionLista = findViewById(R.id.descLista1)
         fechacreacionLista = findViewById(R.id.fechaLista)
-        /*insertarLista = findViewById(R.id.insertarLista)
-        mostrarTodasListas = findViewById(R.id.mostrarTodasListas)
-        abrirTareas = findViewById(R.id.abrirTareas)*/
         mostrarLista = findViewById(R.id.mostrarLista1)
         mostrar()
 
@@ -73,10 +70,10 @@ class MainActivity : AppCompatActivity() {
 
     fun insertarListas(){
         try {
-            var trans = bdLista.writableDatabase
+            var trans = basadatos.writableDatabase
             var SQL = "INSERT INTO LISTA VALUES(NULL,'DESC','FECHACREA')"
             if (validaCampos() == false) {
-                mensaje("Error!", "Existe algun campo vacio (\"Descripcion\" y/o \"Fecha de creacion\")")
+                mensaje("Error!", "Existe algun campo vacio,  Revise los campos")
                 return
             }
 
@@ -95,7 +92,7 @@ class MainActivity : AppCompatActivity() {
     fun mostrar(){
         var sel = ""
         try {
-            var transicion = bdLista.readableDatabase
+            var transicion = basadatos.readableDatabase
             var con = "SELECT * FROM LISTA"
             var cur = transicion.rawQuery(con,null)
             if(cur != null) {
